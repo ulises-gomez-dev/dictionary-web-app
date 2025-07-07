@@ -2,12 +2,21 @@
   .navbar {
     display: flex;
     justify-content: space-between;
+    align-items: center;
+    margin-bottom: 52px;
+    margin-top: 58px;
+  }
+
+  .theme {
+    display: inline-flex;
+    gap: 18px;
   }
 }
 
-.theme {
-  display: flex;
-  gap: 18px;
+.line {
+  border-left: 1px solid var(--grey-200);
+  height: 32px;
+  margin: 0 26px;
 }
 
 .font {
@@ -33,4 +42,3 @@
 .font.mono {
   font-family: "Inconsolata-Bold";
 }
-
