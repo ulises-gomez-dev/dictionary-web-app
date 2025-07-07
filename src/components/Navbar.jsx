@@ -1,3 +1,4 @@
+import ToggleSwitch from "./ToggleSwitch";
 import { useState } from "react";
 import "../styles/Navbar.css";
 
@@ -16,6 +17,7 @@ function Navbar({ className }) {
       <div className="modes">
         <button className={`font ${font}`}>Sans Serif</button>
         <div className="theme">
+          <ToggleSwitch className="switch" />
           <img src="./src/assets/images/icon-moon.svg" alt="" />
         </div>
       </div>

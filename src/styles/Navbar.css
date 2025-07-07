@@ -5,6 +5,11 @@
   }
 }
 
+.theme {
+  display: flex;
+  gap: 18px;
+}
+
 .font {
   border: none;
   background: none;
