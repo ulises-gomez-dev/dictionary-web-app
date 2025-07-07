@@ -1,0 +1,31 @@
+@layer {
+  .navbar {
+    display: flex;
+    justify-content: space-between;
+  }
+}
+
+.font {
+  border: none;
+  background: none;
+  font-size: 18px;
+  line-height: 24px;
+}
+
+.font::after {
+  content: url("./src/assets/images/icon-arrow-down.svg");
+  margin-left: 18px;
+}
+
+.font.sans-serif {
+  font-family: "Inter-Bold";
+}
+
+.font.serif {
+  font-family: "Lora-Bold";
+}
+
+.font.mono {
+  font-family: "Inconsolata-Bold";
+}
+
