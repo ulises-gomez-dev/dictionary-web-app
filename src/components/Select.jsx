@@ -9,17 +9,25 @@ const options = [
 
 function Select({ className }) {
   const [isOpen, setIsOpen] = useState(false);
+  const [font, setFont] = useState(options[0]);
 
   return (
     <div className={className}>
       <div className="selected-font" onClick={() => setIsOpen(!isOpen)}>
-        <p className={options[0].value}>{options[0].label}</p>
+        <p className={font.value}>{font.label}</p>
         <img src="./src/assets/images/icon-arrow-down.svg" alt="" />
       </div>
       {isOpen && (
         <ul className="dropdown">
           {options.map((option) => (
-            <li key={option.value} className={option.value}>
+            <li
+              key={option.value}
+              className={option.value}
+              onClick={() => {
+                setFont(option);
+                setIsOpen(false);
+              }}
+            >
               {option.label}
             </li>
           ))}
