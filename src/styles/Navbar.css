@@ -5,6 +5,11 @@
     align-items: center;
     margin-bottom: 52px;
     margin-top: 58px;
+    border: 1px solid black
+  }
+
+  .select {
+    display: inline-block;
   }
 
   .theme {
