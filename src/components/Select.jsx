@@ -2,9 +2,9 @@ import { useState } from "react";
 import "../styles/Select.css";
 
 const options = [
-  { value: "sans-serif", label: "Sans Serif" },
-  { value: "serif", label: "Serif" },
-  { value: "mono", label: "Mono" },
+  { value: "sans-serif", label: "Sans Serif", id: 0 },
+  { value: "serif", label: "Serif", id: 1 },
+  { value: "mono", label: "Mono", id: 2 },
 ];
 
 function Select({ className }) {
@@ -26,6 +26,9 @@ function Select({ className }) {
               onClick={() => {
                 setFont(option);
                 setIsOpen(false);
+                const root = document.getElementById("root");
+                root.classList.remove(font.value)
+                root.classList.add(option.value);
               }}
             >
               {option.label}

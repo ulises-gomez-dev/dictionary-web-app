@@ -2,6 +2,18 @@
   .select {
     position: relative;
     cursor: pointer;
+
+    .sans-serif {
+      font-family: var(--sans-serif-bold);
+    }
+
+    .serif {
+      font-family: var(--serif-bold);
+    }
+
+    .mono {
+      font-family: var(--mono-bold);
+    }
   }
 
   .selected-font {
@@ -11,7 +23,7 @@
 
   .dropdown {
     list-style-type: none;
-    background: var(--white);
+    background: var(--FFFFFF);
     width: 183px;
     height: auto;
     padding: 24px;
@@ -31,18 +43,6 @@
   }
 
   .dropdown li:hover {
-    color: var(--purple);
+    color: var(--accent-color);
   }
-}
-
-.sans-serif {
-  font-family: "Inter-Bold";
-}
-
-.serif {
-  font-family: "Lora-Bold";
-}
-
-.mono {
-  font-family: "Inconsolata-Bold";
 }
