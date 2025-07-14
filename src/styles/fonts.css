@@ -30,9 +30,3 @@
   font-family: "Lora-Bold";
   src: url("./src/assets/fonts/lora/static/Lora-Bold.ttf") format("truetype");
 }
-
-@font-face {
-  font-family: "Lora-BoldItalic";
-  src: url("./src/assets/fonts/lora/static/Lora-BoldItalic.ttf")
-    format("truetype");
-}

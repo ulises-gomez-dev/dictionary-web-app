@@ -1,32 +1,32 @@
 import { useState } from "react";
 import getWordDefinitions from "./services/dictionaryapi";
-import { Navbar, Searchbar, NotFound } from "./components";
+import { Navbar, Searchbar, NotFound, Definition } from "./components";
 import "./App.css";
 
 function App() {
-  const [word, setWord] = useState("");
   const [definition, setDefinition] = useState(null);
-  const [status, setStatus] = useState(null); // Ex: 'typing', 'submitting', or 'success'
   const [error, setError] = useState(false);
 
-  const handleQueryChange = (e) => {
-    setWord(e.target.value);
-  };
+  const handleWordSearch = (data) => {
+    const word = data.get("word");
 
-  const handleQuerySearch = () => {
-    getWordDefinitions(word).then((result) => setDefinition(result));
+    getWordDefinitions(word).then((result) => {
+      if (!result) {
+        setDefinition(null);
+        setError(true);
+      } else {
+        setDefinition(result);
+        setError(false);
+      }
+    });
   };
 
   return (
     <div className="dictionary">
       <Navbar className="navbar" />
-      <Searchbar
-        className="searchbar"
-        handleQueryChange={handleQueryChange}
-        handleQuerySearch={handleQuerySearch}
-      />
-      {definition !== null ? (
-        <></>
+      <Searchbar className="searchbar" handleWordSearch={handleWordSearch} />
+      {definition ? (
+        <Definition className="definition" definition={definition} />
       ) : error ? (
         <NotFound className="notfound" />
       ) : (

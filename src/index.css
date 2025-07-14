@@ -50,6 +50,7 @@
     --bg-color: var(--FFFFFF);
     --bg-color-secondary: var(--F4F4F4);
     --ft-color: var(--2D2D2D);
+    --ft-color-secondary: var(--757575);
     --accent-color: var(--A445ED);
     --font: var(--sans-serif);
     --font-bold: var(--sans-serif-bold);
@@ -95,9 +96,16 @@
     font-style: italic;
   }
 
+  h1,
+  h3,
   p,
-  input {
+  input,
+  li {
     color: var(--ft-color);
+  }
+
+  h4 {
+    color: var(--ft-color-secondary);
   }
 
   input {

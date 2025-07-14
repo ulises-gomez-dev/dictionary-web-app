@@ -1,14 +1,13 @@
 import "../styles/Searchbar.css";
 
-function Searchbar({ className, handleQueryChange, handleQuerySearch }) {
-
+function Searchbar({ className, handleWordSearch }) {
   return (
-    <div className={className}>
-      <input type="search" onChange={handleQueryChange} />
-      <span className="search-icon" onClick={handleQuerySearch}>
+    <form className={className} action={handleWordSearch}>
+      <input type="search" name="word" />
+      <span className="search-icon" type="submit">
         <img src="./src/assets/images/icon-search.svg" alt="" />
       </span>
-    </div>
+    </form>
   );
 }
 

@@ -1,0 +1,6 @@
+.example {
+  color: var(--ft-color-secondary);
+}
+.synonym {
+  color: var(--accent-color);
+}
