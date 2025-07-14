@@ -2,7 +2,7 @@ import React from "react";
 import "../styles/Definition.css";
 
 export default function Definition({ className, definition }) {
-  const { word, phonetic, meanings } = definition[0];
+  const { word, phonetic, meanings, sourceUrls } = definition[0];
   return (
     <div className={className}>
       <div className="word">
@@ -12,6 +12,15 @@ export default function Definition({ className, definition }) {
       {meanings.map((meaning, index) => (
         <Meanings key={index} className="meaning" meaning={meaning} />
       ))}
+      <div className="source">
+        <h5>Source</h5>
+        {sourceUrls.map((url, index) => (
+          <div key={index} className="url">
+            <a href={url}>{url}</a>
+            <img src="./src/assets/images/icon-new-window.svg" alt=""/>
+          </div>
+        ))}
+      </div>
     </div>
   );
 }

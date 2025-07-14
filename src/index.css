@@ -59,12 +59,22 @@
     font-family: var(--font);
     width: 100vw;
     height: 100vh;
+
+    .dropdown {
+      background: var(--bg-color);
+      box-shadow: 0px 5px 30px 0px rgba(0, 0, 0, 0.1);
+    }
   }
 
   #root.dark {
     --bg-color: var(--050505);
     --bg-color-secondary: var(--1F1F1F);
     --ft-color: var(--FFFFFF);
+
+    .dropdown {
+      background: var(--bg-color-secondary);
+      box-shadow: 0px 5px 30px 0px var(--accent-color);
+    }
   }
 
   #root.sans-serif {
@@ -100,15 +110,21 @@
   h3,
   p,
   input,
-  li {
+  li,
+  a {
     color: var(--ft-color);
   }
 
-  h4 {
+  h4,
+  h5 {
     color: var(--ft-color-secondary);
   }
 
   input {
     font-family: var(--font-bold);
+  }
+
+  ::placeholder {
+    opacity: 0.25;
   }
 }
