@@ -1,0 +1,32 @@
+@layer layout {
+  #root {
+    display: flex;
+    justify-content: center;
+  }
+
+  .dictionary {
+    --margin-sm: 24px;
+    --margin-md: 40px;
+    --margin-lg: 58px;
+
+    max-width: 737px;
+  }
+
+  @media screen and (width <= 767px) {
+    .dictionary {
+      margin: var(--margin-sm);
+    }
+  }
+
+  @media screen and (width >= 768px) and (width <= 1023px) {
+    .dictionary {
+      margin: var(--margin-md);
+    }
+  }
+
+  @media screen and (width >= 1024px) {
+    .dictionary {
+      margin-top: var(--margin-lg);
+    }
+  }
+}

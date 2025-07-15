@@ -7,6 +7,7 @@
   border-radius: 16px;
   padding: 20px 24px;
   background: var(--bg-color-secondary);
+  margin-top: 51.5px;
 }
 
 .searchbar input {
