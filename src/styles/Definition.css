@@ -1,6 +1,31 @@
+.definition,
+.meaning {
+  --gap-size: 40px;
+
+  display: flex;
+  flex-direction: column;
+  gap: var(--gap-size);
+}
+
+.synonyms {
+  display: flex;
+  align-items: center;
+  gap: 24px;
+
+}
+
 .example {
   color: var(--ft-color-secondary);
 }
+
 .synonym {
   color: var(--accent-color);
+  font-weight: 700;
+}
+
+@media screen and (width <= 767px) {
+  .definition,
+  .meaning {
+    --gap-size: 32px;
+  }
 }

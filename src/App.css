@@ -1,20 +1,76 @@
+@layer utilities {
+  .dictionary {
+    --margin-sm: 24px;
+    --margin-md: 40px;
+    --margin-lg: 58px;
+
+    width: 737px;
+  }
+
+  h1 {
+    --ft-size: 64px;
+  }
+
+  h2,
+  h3 {
+    --ft-size: 24px;
+  }
+
+  h4 {
+    --ft-size: 20px;
+  }
+
+  .item {
+    --ft-size: 18px;
+    --m: 2.7em;
+  }
+
+  h1,
+  h2,
+  h3,
+  h4,
+  .item {
+    font-size: var(--ft-size);
+  }
+
+  .item {
+    margin-left: var(--m);
+  }
+}
+
 @layer layout {
   #root {
     display: flex;
     justify-content: center;
   }
 
-  .dictionary {
-    --margin-sm: 24px;
-    --margin-md: 40px;
-    --margin-lg: 58px;
-
-    max-width: 737px;
+  .list {
+    display: flex;
+    flex-direction: column;
+    gap: 13px;
   }
 
   @media screen and (width <= 767px) {
     .dictionary {
       margin: var(--margin-sm);
+    }
+
+    h1 {
+      --ft-size: 32px;
+    }
+
+    h2,
+    h3 {
+      --ft-size: 18px;
+    }
+
+    h4 {
+      --ft-size: 16px;
+    }
+
+    .item {
+      --ft-size: 15px;
+      --m: 1em;
     }
   }
 
